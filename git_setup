@@ -1,0 +1,20 @@
+
+REM Set up Notepad++ as editor
+call git config --global core.editor notepad++
+
+REM Configure P4Merge as visual difftool
+call git config --global diff.tool p4merge
+call git config --global diff.guitool p4merge
+call git config --global difftool.p4merge.cmd "p4merge.exe \"$LOCAL\" \"$REMOTE\""
+
+REM Configure P4Merge as visual merge tool
+call git config --global merge.tool p4merge
+call git config --global mergetool.p4merge.cmd "p4merge.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"" 
+call git config --global mergetool.p4merge.trustExitCode false
+call git config --global mergetool.p4merge.keepBackup false
+
+REM Setup alias
+call git config --global alias.st status
+call git config --global alias.ci commit
+call git config --global alias.co checkout
+call git config --global alias.br branch
