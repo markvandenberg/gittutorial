@@ -12,6 +12,7 @@ namespace ConsoleApplication1
         {
             Console.WriteLine("In Main");
             Console.WriteLine("Van Peter");
+            Console.WriteLine("line from master");
         }
     }
 }
